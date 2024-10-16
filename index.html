@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 Awareness</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>COVID-19 Awareness</h1>
+      <p>Your health is your priority</p>
+    </header>
+
+    <nav>
+      <a href="#home" onclick="showSection('home')">Home</a>
+      <a href="#about" onclick="showSection('about')">About</a>
+      <a href="#symptoms" onclick="showSection('symptoms')">Symptoms</a>
+      <a href="#precautions" onclick="showSection('precautions')"
+        >Precautions</a
+      >
+      <a href="#registration" onclick="showSection('registration')"
+        >Registration</a
+      >
+      <a href="#viewRegistrations" onclick="showSection('viewRegistrations')"
+        >View Registrations</a
+      >
+    </nav>
+
+    <section id="home" class="fade-in">
+      <h2>Welcome to COVID-19 Awareness</h2>
+      <p>
+        This website provides important information regarding COVID-19, a
+        disease caused by the coronavirus SARS-CoV-2. With the right knowledge
+        and precautions, we can protect ourselves and others.
+      </p>
+    </section>
+
+    <section id="about" class="fade-in">
+      <h2>About COVID-19</h2>
+      <p>
+        COVID-19 is a contagious disease that primarily spreads through
+        respiratory droplets when an infected person coughs, sneezes, talks, or
+        breathes. It can also spread by touching surfaces contaminated with the
+        virus.
+      </p>
+      <h3>Transmission</h3>
+      <ul>
+        <li>Direct contact with infected individuals.</li>
+        <li>
+          Touching surfaces that have the virus on them and then touching the
+          face.
+        </li>
+        <li>Airborne transmission in enclosed spaces.</li>
+      </ul>
+      <h3>Impact</h3>
+      <p>
+        The disease can cause severe respiratory illness, and the elderly and
+        those with underlying health conditions are at higher risk. Since its
+        outbreak, COVID-19 has led to millions of infections and significant
+        global disruption.
+      </p>
+      <h3>Mental Health Considerations</h3>
+      <p>
+        The pandemic has also affected mental health due to social isolation and
+        uncertainty. It's important to reach out for help if you're feeling
+        overwhelmed.
+      </p>
+    </section>
+
+    <section id="symptoms" class="fade-in">
+      <h2>Symptoms of COVID-19</h2>
+      <p>Common symptoms of COVID-19 include:</p>
+      <ul>
+        <li>Fever or chills</li>
+        <li>Cough</li>
+        <li>Shortness of breath or difficulty breathing</li>
+        <li>Fatigue</li>
+        <li>Muscle or body aches</li>
+        <li>New loss of taste or smell</li>
+        <li>Sore throat</li>
+        <li>Congestion or runny nose</li>
+        <li>Nausea or vomiting</li>
+        <li>Diarrhea</li>
+      </ul>
+      <p>
+        Symptoms can appear 2-14 days after exposure to the virus. If you
+        experience any of these symptoms, seek medical attention immediately.
+        Early detection can help in timely treatment and prevent severe
+        outcomes.
+      </p>
+    </section>
+
+    <section id="precautions" class="fade-in">
+      <h2>Precautions Against COVID-19</h2>
+      <h3>To reduce the risk of infection, follow these guidelines:</h3>
+      <ul>
+        <li>
+          <strong>Wash your hands:</strong> Regularly wash your hands with soap
+          and water for at least 20 seconds or use hand sanitizer when soap is
+          not available.
+        </li>
+        <li>
+          <strong>Wear masks:</strong> Wear a mask in crowded or enclosed spaces
+          to protect yourself and others.
+        </li>
+        <li>
+          <strong>Maintain social distance:</strong> Keep at least 6 feet (2
+          meters) away from others, especially in crowded areas.
+        </li>
+        <li>
+          <strong>Avoid gatherings:</strong> Stay away from large gatherings and
+          enclosed spaces with poor ventilation.
+        </li>
+        <li>
+          <strong>Stay informed:</strong> Follow updates from health authorities
+          and stay aware of the latest information regarding COVID-19 in your
+          area.
+        </li>
+      </ul>
+      <h3>Vaccination</h3>
+      <p>
+        Vaccination is a crucial step in controlling the pandemic. Vaccines are
+        safe and effective in preventing severe illness and hospitalization. Get
+        vaccinated when eligible and encourage others to do the same.
+      </p>
+    </section>
+
+    <section id="registration" class="fade-in">
+      <h2>Registration</h2>
+      <p>
+        Please register to receive updates about COVID-19 and vaccination drives
+        in your area. This will help us keep you informed about the latest
+        health guidelines and resources.
+      </p>
+      <form
+        class="register-form"
+        id="registrationForm"
+        onsubmit="registerUser(event)"
+      >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="mobile">Mobile Number:</label>
+        <input
+          type="tel"
+          id="mobile"
+          name="mobile"
+          required
+          pattern="[0-9]{10}"
+          placeholder="10-digit mobile number"
+        />
+
+        <label for="govIdType">Government ID Type:</label>
+        <select id="govIdType" name="govIdType" required>
+          <option value="">Select ID Type</option>
+          <option value="aadhaar">Aadhaar</option>
+          <option value="pan">PAN</option>
+          <option value="passport">Passport</option>
+          <option value="voterId">Voter ID</option>
+        </select>
+
+        <label for="govIdNumber">Government ID Number:</label>
+        <input
+          type="text"
+          id="govIdNumber"
+          name="govIdNumber"
+          required
+          placeholder="Enter your ID number"
+        />
+
+        <label for="covidTestType">COVID-19 Test Type:</label>
+        <select id="covidTestType" name="covidTestType" required>
+          <option value="">Select Test Type</option>
+          <option value="rtPcr">RT-PCR</option>
+          <option value="rapidAntigen">Rapid Antigen</option>
+          <option value="antibody">Antibody</option>
+        </select>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="time">Time Slot:</label>
+        <input type="time" id="time" name="time" required />
+
+        <input type="submit" value="Register" />
+      </form>
+
+      <div id="registeredUsers" class="registered-users">
+        <h3>Registered Users:</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Gender</th>
+              <th>Mobile Number</th>
+              <th>Gov ID Type</th>
+              <th>Gov ID Number</th>
+              <th>COVID Test Type</th>
+              <th>Date</th>
+              <th>Time Slot</th>
+            </tr>
+          </thead>
+          <tbody id="registrationBody">
+            <!-- Registered users will be displayed here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="viewRegistrations" class="fade-in">
+      <h2>View Registrations</h2>
+      <p>
+        This section allows you to view all registered individuals. Information
+        is displayed above.
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 COVID-19 Awareness. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
