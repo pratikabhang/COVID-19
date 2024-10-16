@@ -1,0 +1,21 @@
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+header.dark-mode {
+  background: #0056b3;
+}
+
+nav.dark-mode {
+  background: #004080;
+}
+
+section.dark-mode {
+  background: #444;
+  color: #fff;
+}
+
+footer.dark-mode {
+  background: #0056b3;
+}
